@@ -1,10 +1,62 @@
-// add root stuff here
-html {
-  display: initial
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900&display=swap");
+:root {
+  /* animation vars */
+  --waves-speed: 3s;
+  /* Colours */
+  --shell-dark-pink: #ff1d8e;
+  --shell-light-pink: #e86ba4;
+  --shell-teal: #22c3d5;
+  --shell-navy: #172a61;
+  --shell-sand: #fbedca;
+  --shell-dark-brown: #665b50;
+  --shell-mid-brown: #8e7a69;
+  --shell-light-brown: #9e8d7d;
+  --shell-gradient: linear-gradient(#22c3d5, #172a61);
+  /* line heights */
+  --line-height-xsmall: 1.5384615em;
+  --line-height-small: 1.25em;
+  --line-height-large: 1.375em;
+  --paragraph-height: 1.5em;
+  /* Mobile */
+  --paragraph: 14px;
+  --sub-heading: 1.4rem;
+  --heading: 1.8rem;
+  --heading-bg: 2rem;
 }
+
+@media screen and (min-width: 800px) {
+  /* Desktop */
+  :root {
+    --paragraph: 1.2rem;
+    --sub-heading: 1.777rem;
+    --heading: 2.369rem;
+    --heading-bg: 3.157rem;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 500px) {
+  /* Tablets */
+  :root {
+    --paragraph: 1.2rem;
+    --sub-heading: 1.777rem;
+    --heading: 2.369rem;
+    --heading-bg: 3.157rem;
+  }
+}
+
+/* Containers */
+
+html,
 body {
-  //temp stylings
-  display: flex;
-  align-items: center;
-  text-align: center;
+  height: 100%;
+  width: 100vw;
+  background: var(--shell-sand);
+  color: white;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
