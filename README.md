@@ -4,9 +4,9 @@
 
 ---
 
-## getting started
+## Getting started
 
-run `yarn` to get your depencies...
+run `yarn` to get your dependencies...
 
 ### Scripts
 
