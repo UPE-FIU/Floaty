@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import Loadable from "react-loadable";
-import { StaticRouter } from "react-router";
 import { Helmet } from "react-helmet";
 
 // import our main App component

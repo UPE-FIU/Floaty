@@ -11,16 +11,7 @@ const AsyncPage = Loadable({
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <div className="App-intro">
-          <h1>Hello there Steven!</h1>
-          <br />
-          <br />
-          <AsyncPage />
-        </div>
-      </div>
-    );
+    return <AsyncPage />;
   }
 }
 

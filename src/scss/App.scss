@@ -1,1 +1,55 @@
-// add stuff here
+* a:hover {
+    cursor: pointer;
+}
+
+.links {
+    color: var(--shell-sand);
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: var(--heading-bg);
+    font-weight: 900;
+    line-height: var(--line-height-small);
+}
+
+h2 {
+    font-size: var(--heading);
+    font-weight: 700;
+    line-height: var(--line-height-small);
+}
+
+h3 {
+    font-size: var(--sub-heading);
+    font-weight: 600;
+}
+
+h4 {
+    font-size: var(--paragraph);
+    line-height: var(--paragraph-height);
+    font-weight: 400;
+}
+
+p {
+    font-size: var(--paragraph);
+    line-height: var(--paragraph-height);
+    font-weight: 500;
+}
+
+#root
+{
+    overflow-x: hidden;
+}
+
+.hover-effect:hover {
+    background-color: var(--shell-dark-pink);
+    color: white;
+}
+
+.live-card {
+    background-color: gray;
+}
+.active-live-card {
+    background-color: darkblue;
+}
+

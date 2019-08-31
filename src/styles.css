@@ -1,0 +1,42 @@
+.live-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100vh;
+    overflow: auto
+}
+
+.messages-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50vw;
+    padding: 2% 5% 2% 5%;
+    z-index: 5;
+}
+
+.music-player-section{
+    z-index: 5;
+}
+.schedule-continer{
+    z-index: 5;
+    padding: 2% 5% 2% 5%;
+    height: 75%;
+    width: 50vw
+}
+
+.live-schedule{
+    height: 100%;
+    overflow-y: auto
+}
+h2 {
+    color: grey;
+}
+
+h1 {
+    color: gray;
+}
+.live-schedule .card-container .card-content p{
+    color: black;
+}
+
