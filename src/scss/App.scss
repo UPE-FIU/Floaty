@@ -1,22 +1,3 @@
-section {
-    min-height: 100vh;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 10%;
-}
-
-section h1 {
-    color: white;
-    margin: 50px 0px;
-    text-align: center;
-    width: 100%;
-}
-
 * a:hover {
     cursor: pointer;
 }
@@ -65,30 +46,6 @@ p {
     color: white;
 }
 
-.dashboard-card {
-    background-color: var(--shell-dark-brown);
-}
-
-.active-dashboard-card {
-    background-color: var(--shell-light-brown);
-}
-
-.landing-card {
-    background-color: var(--shell-teal);
-}
-
-.active-landing-card {
-    background-color: var(--shell-light-pink);
-}
-
-.landing-section-title {
-    z-index: 1;
-    position: relative;
-}
-.landing-section-paragraph{
-    z-index: 1;
-    position: relative;
-}
 .live-card {
     background-color: gray;
 }
