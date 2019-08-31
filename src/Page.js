@@ -12,7 +12,7 @@ class Live extends Component {
                 <img
                   className="main-section-details-logo"
                   alt="ShellHacks Wordmark"
-                  src={require("./assets/logo.svg")}
+                  src={require("./assets/shellhacks.svg")}
                 />
                 <h1>Live Page</h1>
                 <h2>Live message array goes here</h2>
