@@ -3,11 +3,11 @@
  */
 
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fontawesome/react-fontawesome'
 import {
   faPlus,
   faMinus
-} from "@fortawesome/free-solid-svg-icons"; //need to pre-load in app.js
+} from "@fontawesome/free-solid-svg-icons"; //need to pre-load in app.js
 import PropTypes from 'prop-types'
 import './styles.css'
 

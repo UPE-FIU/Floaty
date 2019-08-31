@@ -1,0 +1,46 @@
+.live-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100vh;
+    
+}
+
+.messages-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50vw;
+    padding: 2% 5% 2% 5%;
+    z-index: 5;
+}
+
+.music-player-section{
+    z-index: 5;
+}
+.schedule-continer{
+    width: 50vw;
+    z-index: 5;
+    padding: 2% 5% 2% 5%;
+    height: 100vh;
+}
+
+.live-schedule{
+    height: 100%;
+    overflow-y: auto
+}
+h2 {
+    color: grey;
+    padding-bottom: 5%;
+}
+
+h1 {
+    color: gray;
+    padding-bottom: 5%;
+}
+.live-schedule .card-container .card-content p{
+    color: black;
+}
+.main-section-details-logo {
+    padding-bottom: 5%
+}
