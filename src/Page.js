@@ -21,6 +21,7 @@ class Live extends Component {
               <div className="music-player-section">
                 {/* <iframe src="https://open.spotify.com/embed/playlist/2R0OPkOjSI3AzpnC0VCbs5" width="400" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> */}
                 <iframe
+                  title="YouTube Stream"
                   width="400"
                   height="200"
                   src="https://www.youtube.com/embed/videoseries?list=PLhjbtbG8AMAR-wzrlksDY6eF1qEg-Cae0"
