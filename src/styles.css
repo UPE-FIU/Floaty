@@ -36,6 +36,12 @@
     padding-right: 25%
 }
 
+.social-media-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
 .music-player-section{
     z-index: 5;
 }
