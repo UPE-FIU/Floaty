@@ -1,5 +1,7 @@
+@import "../../scss/variables.scss";
+
 #wave-background-objects {
-    background: var(--shell-sand);
+    background: $shell-sand;
     display: block;
     position: absolute;
     z-index: 0;
@@ -64,7 +66,7 @@
 }
 
 #wetsand3 {
-    animation: wetsand3 var(--waves-speed) ease 1.6s infinite alternate;
+    animation: wetsand3 $waves-speed ease 1.6s infinite alternate;
     bottom: -5px;
 }
 
@@ -78,7 +80,7 @@
 }
 
 #wetsand2 {
-    animation: wetsand2 var(--waves-speed) ease 1.5s infinite alternate;
+    animation: wetsand2 $waves-speed ease 1.5s infinite alternate;
     bottom: -70px;
 }
 
@@ -92,7 +94,7 @@
 }
 
 #wetsand1 {
-    animation: wetsand1 var(--waves-speed) ease 1.2s infinite alternate;
+    animation: wetsand1 $waves-speed ease 1.2s infinite alternate;
     bottom: -10px;
 }
 
@@ -106,7 +108,7 @@
 }
 
 #surf3 {
-    animation: surf3 var(--waves-speed) ease 0.5s infinite alternate;
+    animation: surf3 $waves-speed ease 0.5s infinite alternate;
     bottom: -0px;
 }
 
@@ -120,7 +122,7 @@
 }
 
 #surf2 {
-    animation: surf2 var(--waves-speed) ease 0.3s infinite alternate;
+    animation: surf2 $waves-speed ease 0.3s infinite alternate;
     bottom: -50px;
 }
 
@@ -134,7 +136,7 @@
 }
 
 #surf1 {
-    animation: surf1 var(--waves-speed) ease 0s infinite alternate;
+    animation: surf1 $waves-speed ease 0s infinite alternate;
     bottom: 0px;
     z-index: 2;
 }

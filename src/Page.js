@@ -8,6 +8,7 @@ import {
   faDiscord
 } from "@fortawesome/free-brands-svg-icons"; //need to pre-load in app.js
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import CardList from "./components/cardList"
 import "./styles.css";
 class Live extends Component {
   render() {
@@ -75,33 +76,21 @@ class Live extends Component {
                 <div className="anouncements-container">
                   <h2>Announcements</h2>
                   <div className="announcement-list">
-                    {liveSchedule.map((card, i) => {
-                      let props = {
-                        title: card.title,
-                        description: card.description,
-                        styleClassName: "live-card",
-                        activeClassName: "active-live-card",
-                        descStyle: "active-live-card card-content p",
-                        i: i
-                      };
-                      return <Card key={i} {...props} />;
-                    })}
+                    <CardList data={[{title: "HMTL Workshop", 
+                                    startTime: "Friday 1:00PM", 
+                                    location: "PG6", 
+                                    organizer: "UPE", 
+                                    description: "Learn HTML from Jehf Doe"}]}/>
                   </div>
                 </div>
                 <div className="schedule-container">
                   <h2>Schedule</h2>
                   <div className="live-schedule">
-                    {liveSchedule.map((card, i) => {
-                      let props = {
-                        title: card.title,
-                        description: card.description,
-                        styleClassName: "live-card",
-                        activeClassName: "active-live-card",
-                        descStyle: "active-live-card card-content p",
-                        i: i
-                      };
-                      return <Card key={i} {...props} />;
-                    })}
+                  <CardList data={[{title: "HMTL Workshop", 
+                                    startTime: "Friday 1:00PM", 
+                                    location: "PG6", 
+                                    organizer: "UPE", 
+                                    description: "Learn HTML from Jehf Doe"}]}/>
                   </div>
                 </div>
               </div>
