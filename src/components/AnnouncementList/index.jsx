@@ -13,11 +13,12 @@ import styles from './Card.module.scss'
 import { liveSchedule } from '../liveSchedule';
 
 const Card = (props) => {
-  const { title, description } = props.data
+  const { title, body, author } = props.data
   return (
     <div className={styles.cardContainer}>
       <h2>{title}</h2>
-      <p>{description}</p>
+      <p>{body}</p>
+      <p>- {author}</p>
     </div>
   )
 

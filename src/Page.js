@@ -25,8 +25,18 @@ class Live extends Component {
                 alt="ShellHacks Wordmark"
                 src={require("./assets/shellhacks.svg")}
               />
-              <LinkContiner link="https://devpost.com/" imgSrc="https://marketing-challengepost.netdna-ssl.com/assets/reimagine2/devpost-logo-a0cd0d3c3681a858b200141ed18a9bf9.svg"/>
-              <LinkContiner link="https://hardware.mlh.io/" imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Major_League_Hacking_logo.svg/375px-Major_League_Hacking_logo.svg.png"/>
+              <LinkContiner 
+                firstLinkDest="https://devpost.com/" 
+                imgSrc="https://marketing-challengepost.netdna-ssl.com/assets/reimagine2/devpost-logo-a0cd0d3c3681a858b200141ed18a9bf9.svg"
+                secondLinkName= "Tables"
+                secondLinkDest="#"
+              />
+              <LinkContiner 
+                link="https://hardware.mlh.io/" 
+                imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Major_League_Hacking_logo.svg/375px-Major_League_Hacking_logo.svg.png"
+                secondLinkName= "Workshop Stream"
+                secondLinkDest="#"
+              />
               <div className="social-media-container">
                 <a href="https://discordapp.com/invite/upefiu">
                   <FontAwesomeIcon icon={faDiscord} size="4x" />
@@ -67,7 +77,8 @@ class Live extends Component {
                   <h2>Announcements</h2>
                   <div className="announcement-list">
                     <AnnouncementList data={[{title: "Snacks Update!",
-                                    description: "Snacks will be coming around in the next 10 minutes"}]}/>
+                                    body: "Snacks will be coming around in the next 10 minutes",
+                                    author: "ShellHacks Team"}]}/>
                   </div>
                 </div>
                 <div className="schedule-container">
