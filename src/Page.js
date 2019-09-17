@@ -77,11 +77,8 @@ class Live extends Component {
                 <div className="anouncements-container">
                   <h2>Announcements</h2>
                   <div className="announcement-list">
-                    <AnnouncementList data={[{title: "HMTL Workshop", 
-                                    startTime: "Friday 1:00PM", 
-                                    location: "PG6", 
-                                    organizer: "UPE", 
-                                    description: "Learn HTML from Jehf Doe"}]}/>
+                    <AnnouncementList data={[{title: "Snacks Update!",
+                                    description: "Snacks will be coming around in the next 10 minutes"}]}/>
                   </div>
                 </div>
                 <div className="schedule-container">

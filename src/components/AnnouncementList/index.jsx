@@ -13,15 +13,10 @@ import styles from './Card.module.scss'
 import { liveSchedule } from '../liveSchedule';
 
 const Card = (props) => {
-  const { title, startTime, location, organizer, description } = props.data
+  const { title, description } = props.data
   return (
     <div className={styles.cardContainer}>
       <h2>{title}</h2>
-      <div className={styles.timeAndLocation}>
-        <h3>{startTime}</h3>
-        <h3>{location}</h3>
-      </div>
-      <h3>{organizer}</h3>
       <p>{description}</p>
     </div>
   )
