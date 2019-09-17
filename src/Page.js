@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ScheduleList from "./components/ScheduleList"
 import AnnouncementList from "./components/AnnouncementList"
 import LinkContiner from "./components/linkContatiner";
+import countdownTimer from "./components/timer"
 import "./styles.css";
 
 class Live extends Component {
@@ -69,7 +70,9 @@ class Live extends Component {
             </div>
             <div className="right-container">
               <div className="timer-container">
-                <div>Timer goes here</div>
+                <div>
+                  <countdownTimer/>
+                </div>
                 <div>Current time here</div>
               </div>
               <div className="schedule-and-announcements">
