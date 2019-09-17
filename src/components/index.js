@@ -1,3 +1,4 @@
 export * from "./animatedWaves";
-export * from "./cardList";
+export * from "./ScheduleList";
+export * from "./AnnouncementList"
 export * from "./liveSchedule";

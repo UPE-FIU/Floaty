@@ -28,7 +28,7 @@ const Card = (props) => {
 
 }
 
-const CardList = ({ data }) => {
+const ScheduleList = ({ data }) => {
   return (
     <div className="card-list">
       {data.map((card, i) => {
@@ -40,4 +40,4 @@ const CardList = ({ data }) => {
   )
 }
 
-export default CardList;
+export default ScheduleList;

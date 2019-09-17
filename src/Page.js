@@ -8,7 +8,8 @@ import {
   faDiscord
 } from "@fortawesome/free-brands-svg-icons"; //need to pre-load in app.js
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import CardList from "./components/cardList"
+import ScheduleList from "./components/ScheduleList"
+import AnnouncementList from "./components/AnnouncementList"
 import "./styles.css";
 class Live extends Component {
   render() {
@@ -76,7 +77,7 @@ class Live extends Component {
                 <div className="anouncements-container">
                   <h2>Announcements</h2>
                   <div className="announcement-list">
-                    <CardList data={[{title: "HMTL Workshop", 
+                    <AnnouncementList data={[{title: "HMTL Workshop", 
                                     startTime: "Friday 1:00PM", 
                                     location: "PG6", 
                                     organizer: "UPE", 
@@ -86,7 +87,7 @@ class Live extends Component {
                 <div className="schedule-container">
                   <h2>Schedule</h2>
                   <div className="live-schedule">
-                  <CardList data={[{title: "HMTL Workshop", 
+                  <ScheduleList data={[{title: "HMTL Workshop", 
                                     startTime: "Friday 1:00PM", 
                                     location: "PG6", 
                                     organizer: "UPE", 
