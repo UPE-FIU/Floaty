@@ -10,7 +10,9 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ScheduleList from "./components/ScheduleList"
 import AnnouncementList from "./components/AnnouncementList"
+import LinkContiner from "./components/linkContatiner";
 import "./styles.css";
+
 class Live extends Component {
   render() {
     return (
@@ -23,21 +25,8 @@ class Live extends Component {
                 alt="ShellHacks Wordmark"
                 src={require("./assets/shellhacks.svg")}
               />
-              <div className="devpost-tables-container">
-                <div className="devpost">
-                  <a href="https://devpost.com/">
-                    <img src="https://marketing-challengepost.netdna-ssl.com/assets/reimagine2/devpost-logo-a0cd0d3c3681a858b200141ed18a9bf9.svg" /></a>
-                </div>
-                <a href="#"><h2>Tables</h2></a>
-              </div>
-              <div className="mlh-workshops">
-                <div >
-                  <a href="https://hardware.mlh.io/">
-                    <img className="mlh-hardware" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Major_League_Hacking_logo.svg/375px-Major_League_Hacking_logo.svg.png" />
-                  </a>
-                </div>
-                <a href="#"><h2>Workshop Stream</h2></a>
-              </div>
+              <LinkContiner link="https://devpost.com/" imgSrc="https://marketing-challengepost.netdna-ssl.com/assets/reimagine2/devpost-logo-a0cd0d3c3681a858b200141ed18a9bf9.svg"/>
+              <LinkContiner link="https://hardware.mlh.io/" imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Major_League_Hacking_logo.svg/375px-Major_League_Hacking_logo.svg.png"/>
               <div className="social-media-container">
                 <a href="https://discordapp.com/invite/upefiu">
                   <FontAwesomeIcon icon={faDiscord} size="4x" />
