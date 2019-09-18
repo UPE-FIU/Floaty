@@ -39,19 +39,19 @@ class Live extends Component {
                 secondLinkDest="#"
               />
               <div className="social-media-container">
-                <a href="https://discordapp.com/invite/upefiu">
+                <a className= "icon" href="https://discordapp.com/invite/upefiu">
                   <FontAwesomeIcon icon={faDiscord} size="4x" />
                 </a>
-                <a href="https://www.instagram.com/upefiu/">
+                <a className= "icon" href="https://www.instagram.com/upefiu/">
                   <FontAwesomeIcon icon={faInstagram} size="4x" />
                 </a>
-                <a href="https://www.facebook.com/upefiu">
+                <a className= "icon" href="https://www.facebook.com/upefiu">
                   <FontAwesomeIcon icon={faFacebookSquare} size="4x" />
                 </a>
-                <a href="https://twitter.com/upefiu">
+                <a className= "icon" href="https://twitter.com/upefiu">
                   <FontAwesomeIcon icon={faTwitterSquare} size="4x" />
                 </a>
-                <a href="https://www.linkedin.com/company/upe-fiu/">
+                <a className= "icon" href="https://www.linkedin.com/company/upe-fiu/">
                   <FontAwesomeIcon icon={faLinkedin} size="4x" />
                 </a>
               </div>
