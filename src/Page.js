@@ -14,15 +14,21 @@ import data from "./dummy";
 import data2 from "./dummy2";
 import List from "./components/List";
 import Card from "./components/Card";
-import styles from "./scss/Page.module.scss"
-
+import sockets from "./services/sockets";
 
 class Live extends Component {
   render() {
     return (
         <AnimatedWaves>
-          <div className={styles.liveContainer}>
-            <div className={styles.leftContainer}>
+          <div className="live-container">
+            {
+
+
+
+
+
+            }
+            <div className="left-container">
               <img
                 className="main-section-details-logo"
                 alt="ShellHacks Wordmark"
