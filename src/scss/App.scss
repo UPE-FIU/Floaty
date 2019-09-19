@@ -1,38 +1,40 @@
+@import "../scss/variables.scss";
+
 * a:hover {
     cursor: pointer;
 }
 
 .links {
-    color: var(--shell-sand);
+    color: $shell-sand;
     text-decoration: underline;
 }
 
 h1 {
-    font-size: var(--heading-bg);
+    font-size: $heading-bg;
     font-weight: 900;
-    line-height: var(--line-height-small);
+    line-height: $line-height-small;
 }
 
 h2 {
-    font-size: var(--heading);
+    font-size: $heading;
     font-weight: 700;
-    line-height: var(--line-height-small);
+    line-height: $line-height-small;
 }
 
 h3 {
-    font-size: var(--sub-heading);
+    font-size: $sub-heading;
     font-weight: 600;
 }
 
 h4 {
-    font-size: var(--paragraph);
-    line-height: var(--paragraph-height);
+    font-size: $paragraph;
+    line-height: $paragraph-height;
     font-weight: 400;
 }
 
 p {
-    font-size: var(--paragraph);
-    line-height: var(--paragraph-height);
+    font-size: $paragraph;
+    line-height: $paragraph-height;
     font-weight: 500;
 }
 
@@ -42,7 +44,7 @@ p {
 }
 
 .hover-effect:hover {
-    background-color: var(--shell-dark-pink);
+    background-color: $shell-dark-pink;
     color: white;
 }
 

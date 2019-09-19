@@ -8,7 +8,12 @@ import {
   faDiscord
 } from "@fortawesome/free-brands-svg-icons"; //need to pre-load in app.js
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ScheduleList from "./components/ScheduleList"
+import AnnouncementList from "./components/AnnouncementList"
+import LinkContiner from "./components/linkContatiner";
+import countdownTimer from "./components/timer"
 import "./styles.css";
+
 class Live extends Component {
   render() {
     return (
@@ -21,35 +26,32 @@ class Live extends Component {
                 alt="ShellHacks Wordmark"
                 src={require("./assets/shellhacks.svg")}
               />
-              <div className="devpost-tables-container">
-                <div className="devpost">
-                  <a href="https://devpost.com/">
-                    <img src="https://marketing-challengepost.netdna-ssl.com/assets/reimagine2/devpost-logo-a0cd0d3c3681a858b200141ed18a9bf9.svg" /></a>
-                </div>
-                <a href="#"><h2>Tables</h2></a>
-              </div>
-              <div className="mlh-workshops">
-                <div >
-                  <a href="https://hardware.mlh.io/">
-                    <img className="mlh-hardware" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Major_League_Hacking_logo.svg/375px-Major_League_Hacking_logo.svg.png" />
-                  </a>
-                </div>
-                <a href="#"><h2>Workshop Stream</h2></a>
-              </div>
+              <LinkContiner 
+                firstLinkDest="https://devpost.com/" 
+                imgSrc="https://marketing-challengepost.netdna-ssl.com/assets/reimagine2/devpost-logo-a0cd0d3c3681a858b200141ed18a9bf9.svg"
+                secondLinkName= "Tables"
+                secondLinkDest="#"
+              />
+              <LinkContiner 
+                link="https://hardware.mlh.io/" 
+                imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Major_League_Hacking_logo.svg/375px-Major_League_Hacking_logo.svg.png"
+                secondLinkName= "Workshop Stream"
+                secondLinkDest="#"
+              />
               <div className="social-media-container">
-                <a href="https://discordapp.com/invite/upefiu">
+                <a className= "icon" href="https://discordapp.com/invite/upefiu">
                   <FontAwesomeIcon icon={faDiscord} size="4x" />
                 </a>
-                <a href="https://www.instagram.com/upefiu/">
+                <a className= "icon" href="https://www.instagram.com/upefiu/">
                   <FontAwesomeIcon icon={faInstagram} size="4x" />
                 </a>
-                <a href="https://www.facebook.com/upefiu">
+                <a className= "icon" href="https://www.facebook.com/upefiu">
                   <FontAwesomeIcon icon={faFacebookSquare} size="4x" />
                 </a>
-                <a href="https://twitter.com/upefiu">
+                <a className= "icon" href="https://twitter.com/upefiu">
                   <FontAwesomeIcon icon={faTwitterSquare} size="4x" />
                 </a>
-                <a href="https://www.linkedin.com/company/upe-fiu/">
+                <a className= "icon" href="https://www.linkedin.com/company/upe-fiu/">
                   <FontAwesomeIcon icon={faLinkedin} size="4x" />
                 </a>
               </div>
@@ -68,40 +70,28 @@ class Live extends Component {
             </div>
             <div className="right-container">
               <div className="timer-container">
-                <div>Timer goes here</div>
+                <div>
+                  <countdownTimer/>
+                </div>
                 <div>Current time here</div>
               </div>
               <div className="schedule-and-announcements">
                 <div className="anouncements-container">
                   <h2>Announcements</h2>
                   <div className="announcement-list">
-                    {liveSchedule.map((card, i) => {
-                      let props = {
-                        title: card.title,
-                        description: card.description,
-                        styleClassName: "live-card",
-                        activeClassName: "active-live-card",
-                        descStyle: "active-live-card card-content p",
-                        i: i
-                      };
-                      return <Card key={i} {...props} />;
-                    })}
+                    <AnnouncementList data={[{title: "Snacks Update!",
+                                    body: "Snacks will be coming around in the next 10 minutes",
+                                    author: "ShellHacks Team"}]}/>
                   </div>
                 </div>
                 <div className="schedule-container">
                   <h2>Schedule</h2>
                   <div className="live-schedule">
-                    {liveSchedule.map((card, i) => {
-                      let props = {
-                        title: card.title,
-                        description: card.description,
-                        styleClassName: "live-card",
-                        activeClassName: "active-live-card",
-                        descStyle: "active-live-card card-content p",
-                        i: i
-                      };
-                      return <Card key={i} {...props} />;
-                    })}
+                  <ScheduleList data={[{title: "HMTL Workshop", 
+                                    startTime: "Friday 1:00PM", 
+                                    location: "PG6", 
+                                    organizer: "UPE", 
+                                    description: "Learn HTML from Jehf Doe"}]}/>
                   </div>
                 </div>
               </div>

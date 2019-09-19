@@ -2,7 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Loadable from "react-loadable";
 
+import "./scss/reset.scss"
 import "./scss/index.scss";
+
 import App from "./App";
 
 const AppBundle = <App />;
