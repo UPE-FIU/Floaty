@@ -51,7 +51,6 @@
 }
 .right-container{
     display: flex;
-    flex-direction: column;
     z-index: 5;
     padding: 2% 5% 2% 0%;
     height: 75%;

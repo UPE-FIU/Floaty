@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { AnimatedWaves } from "./components";
+import AnimatedWaves from "./components/AnimatedWaves";
 import {
   faFacebookSquare,
   faInstagram,
@@ -8,19 +8,21 @@ import {
   faDiscord
 } from "@fortawesome/free-brands-svg-icons"; //need to pre-load in app.js
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import LinkContiner from "./components/linkContatiner";
-import "./styles.css";
+import LinkContiner from "./components/LinkGroup";
+// import Timer from "./components/Timer"
 import data from "./dummy";
+import data2 from "./dummy2";
 import List from "./components/List";
 import Card from "./components/Card";
+import styles from "./scss/Page.module.scss"
+
 
 class Live extends Component {
   render() {
     return (
-      <div>
         <AnimatedWaves>
-          <div className="live-container">
-            <div className="left-container">
+          <div className={styles.liveContainer}>
+            <div className={styles.leftContainer}>
               <img
                 className="main-section-details-logo"
                 alt="ShellHacks Wordmark"
@@ -38,27 +40,27 @@ class Live extends Component {
                 secondLinkName="Workshop Stream"
                 secondLinkDest="#"
               />
-              <div className="social-media-container">
-                <a className="icon" href="https://discordapp.com/invite/upefiu">
+              <div className={styles.socialMediaContainer}>
+                <a className={styles.icon} href="https://discordapp.com/invite/upefiu">
                   <FontAwesomeIcon icon={faDiscord} size="4x" />
                 </a>
-                <a className="icon" href="https://www.instagram.com/upefiu/">
+                <a className={styles.icon} href="https://www.instagram.com/upefiu/">
                   <FontAwesomeIcon icon={faInstagram} size="4x" />
                 </a>
-                <a className="icon" href="https://www.facebook.com/upefiu">
+                <a className={styles.icon} href="https://www.facebook.com/upefiu">
                   <FontAwesomeIcon icon={faFacebookSquare} size="4x" />
                 </a>
-                <a className="icon" href="https://twitter.com/upefiu">
+                <a className={styles.icon} href="https://twitter.com/upefiu">
                   <FontAwesomeIcon icon={faTwitterSquare} size="4x" />
                 </a>
                 <a
-                  className="icon"
+                  className={styles.icon}
                   href="https://www.linkedin.com/company/upe-fiu/"
                 >
                   <FontAwesomeIcon icon={faLinkedin} size="4x" />
                 </a>
               </div>
-              <div className="music-player-section">
+              <div className={styles.musicPlayerSection}>
                 {/* <iframe src="https://open.spotify.com/embed/playlist/2R0OPkOjSI3AzpnC0VCbs5" width="400" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> */}
                 <iframe
                   title="YouTube Stream"
@@ -71,24 +73,35 @@ class Live extends Component {
                 ></iframe>
               </div>
             </div>
-            <div className="right-container">
+            <div className={styles.rightContainer}>
+               <div className={styles.timerContainer}>
+                  {/*<Timer/>*/}
+                <div>Current time here</div>
+              </div>
+              <div className={styles.scheduleAndAnnouncements}>
               <List>
                 {data.map((card, i) => (
                   <Card key={i}>
                     <h2>{card.title}</h2>
-                    <h2>{card.body}</h2>
-                    <h2>{card.category}</h2>
-                    <h2>{card.sendTime}</h2>
+                    <p>{card.body}</p>
+                    <p>{card.category}</p>
+                    <p>{card.sendTime}</p>
+                    <p>- ShellHacks Team</p>
                   </Card>
                 ))}
               </List>
-              {/* <div className="timer-container">
-                <div>
-                  <countdownTimer/>
-                </div>
-                <div>Current time here</div>
+              <List>
+                {data2.map((card, i) => (
+                  <Card key={i}>
+                    <h2>{card.title}</h2>
+                    <h3>{card.startTime}</h3>
+                    <h3>{card.presenters}</h3>
+                    <p>{card.description}</p>
+                  </Card>
+                ))}
+              </List>
               </div>
-              <div className="schedule-and-announcements">
+                {/*
                 <div className="anouncements-container">
                   <h2>Announcements</h2>
                   <div className="announcement-list">
@@ -111,7 +124,6 @@ class Live extends Component {
             </div>
           </div>
         </AnimatedWaves>
-      </div>
     );
   }
 }
