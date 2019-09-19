@@ -128,4 +128,4 @@ const liveSchedule = [
   }
 ];
 
-export { liveSchedule };
+export default liveSchedule;
