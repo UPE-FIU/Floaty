@@ -1,0 +1,22 @@
+@import "../../scss//variables.scss";
+
+.cardContainer {
+  padding: 50px;
+  background-color: $shell-navy;
+  border-radius: 25px;
+  margin: 50px;
+  color: white;
+
+  .children {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    // h2 {
+    // }
+    // h3 {
+    // }
+    // p {
+    // }
+  }
+}

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, AnimatedWaves, liveSchedule } from "./components";
+import { AnimatedWaves } from "./components";
 import {
   faFacebookSquare,
   faInstagram,
@@ -8,11 +8,11 @@ import {
   faDiscord
 } from "@fortawesome/free-brands-svg-icons"; //need to pre-load in app.js
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ScheduleList from "./components/ScheduleList"
-import AnnouncementList from "./components/AnnouncementList"
 import LinkContiner from "./components/linkContatiner";
-import countdownTimer from "./components/timer"
 import "./styles.css";
+import data from "./dummy";
+import List from "./components/List";
+import Card from "./components/Card";
 
 class Live extends Component {
   render() {
@@ -26,32 +26,35 @@ class Live extends Component {
                 alt="ShellHacks Wordmark"
                 src={require("./assets/shellhacks.svg")}
               />
-              <LinkContiner 
-                firstLinkDest="https://devpost.com/" 
+              <LinkContiner
+                firstLinkDest="https://devpost.com/"
                 imgSrc="https://marketing-challengepost.netdna-ssl.com/assets/reimagine2/devpost-logo-a0cd0d3c3681a858b200141ed18a9bf9.svg"
-                secondLinkName= "Tables"
+                secondLinkName="Tables"
                 secondLinkDest="#"
               />
-              <LinkContiner 
-                link="https://hardware.mlh.io/" 
+              <LinkContiner
+                link="https://hardware.mlh.io/"
                 imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Major_League_Hacking_logo.svg/375px-Major_League_Hacking_logo.svg.png"
-                secondLinkName= "Workshop Stream"
+                secondLinkName="Workshop Stream"
                 secondLinkDest="#"
               />
               <div className="social-media-container">
-                <a className= "icon" href="https://discordapp.com/invite/upefiu">
+                <a className="icon" href="https://discordapp.com/invite/upefiu">
                   <FontAwesomeIcon icon={faDiscord} size="4x" />
                 </a>
-                <a className= "icon" href="https://www.instagram.com/upefiu/">
+                <a className="icon" href="https://www.instagram.com/upefiu/">
                   <FontAwesomeIcon icon={faInstagram} size="4x" />
                 </a>
-                <a className= "icon" href="https://www.facebook.com/upefiu">
+                <a className="icon" href="https://www.facebook.com/upefiu">
                   <FontAwesomeIcon icon={faFacebookSquare} size="4x" />
                 </a>
-                <a className= "icon" href="https://twitter.com/upefiu">
+                <a className="icon" href="https://twitter.com/upefiu">
                   <FontAwesomeIcon icon={faTwitterSquare} size="4x" />
                 </a>
-                <a className= "icon" href="https://www.linkedin.com/company/upe-fiu/">
+                <a
+                  className="icon"
+                  href="https://www.linkedin.com/company/upe-fiu/"
+                >
                   <FontAwesomeIcon icon={faLinkedin} size="4x" />
                 </a>
               </div>
@@ -69,7 +72,17 @@ class Live extends Component {
               </div>
             </div>
             <div className="right-container">
-              <div className="timer-container">
+              <List>
+                {data.map((card, i) => (
+                  <Card key={i}>
+                    <h2>{card.title}</h2>
+                    <h2>{card.body}</h2>
+                    <h2>{card.category}</h2>
+                    <h2>{card.sendTime}</h2>
+                  </Card>
+                ))}
+              </List>
+              {/* <div className="timer-container">
                 <div>
                   <countdownTimer/>
                 </div>
@@ -94,7 +107,7 @@ class Live extends Component {
                                     description: "Learn HTML from Jehf Doe"}]}/>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </AnimatedWaves>
