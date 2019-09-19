@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"; //need to pre-load in app.js
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LinkContiner from "./components/LinkGroup";
-// import Timer from "./components/Timer"
+import {CurrentTime, CountdownTimer} from "./components/Timer"
 import data from "./dummy";
 import data2 from "./dummy2";
 import List from "./components/List";
@@ -75,8 +75,8 @@ class Live extends Component {
             </div>
             <div className={styles.rightContainer}>
                <div className={styles.timerContainer}>
-                  {/*<Timer/>*/}
-                <div>Current time here</div>
+                  <CountdownTimer/>
+                <div><CurrentTime/></div>
               </div>
               <div className={styles.scheduleAndAnnouncements}>
               <List>
