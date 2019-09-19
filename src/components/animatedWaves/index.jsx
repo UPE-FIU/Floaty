@@ -28,9 +28,9 @@ class AnimatedWaves extends Component {
               alt="placeholder"
               src={require("../../assets/waves/wetsand2.svg")}
             />
-             <div id="surfboard" class="decor">
-               
-             </div>
+            <div id="surfboard" class="decor">
+
+            </div>
             <img
               id="wetsand1"
               className="decor"
@@ -64,4 +64,4 @@ AnimatedWaves.propTypes = {
   children: PropTypes.element.isRequired,
 };
 
-export { AnimatedWaves };
+export default AnimatedWaves;
