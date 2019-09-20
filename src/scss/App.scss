@@ -1,57 +1,57 @@
 @import "../scss/variables.scss";
 
 * a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-
+* {
+  box-sizing: border-box;
+}
 .links {
-    color: $shell-sand;
-    text-decoration: underline;
+  color: $shell-sand;
+  text-decoration: underline;
 }
 
 h1 {
-    font-size: $heading-bg;
-    font-weight: 900;
-    line-height: $line-height-small;
+  font-size: $heading-bg;
+  font-weight: 900;
+  line-height: $line-height-small;
 }
 
 h2 {
-    font-size: $heading;
-    font-weight: 700;
-    line-height: $line-height-small;
+  font-size: $heading;
+  font-weight: 700;
+  line-height: $line-height-small;
 }
 
 h3 {
-    font-size: $sub-heading;
-    font-weight: 600;
+  font-size: $sub-heading;
+  font-weight: 600;
 }
 
 h4 {
-    font-size: $paragraph;
-    line-height: $paragraph-height;
-    font-weight: 400;
+  font-size: $paragraph;
+  line-height: $paragraph-height;
+  font-weight: 400;
 }
 
 p {
-    font-size: $paragraph;
-    line-height: $paragraph-height;
-    font-weight: 500;
+  font-size: $paragraph;
+  line-height: $paragraph-height;
+  font-weight: 500;
 }
 
-#root
-{
-    overflow-x: hidden;
+#root {
+  overflow-x: hidden;
 }
 
 .hover-effect:hover {
-    background-color: $shell-dark-pink;
-    color: white;
+  background-color: $shell-dark-pink;
+  color: white;
 }
 
 .live-card {
-    background-color: gray;
+  background-color: gray;
 }
 .active-live-card {
-    background-color: darkblue;
+  background-color: darkblue;
 }
-

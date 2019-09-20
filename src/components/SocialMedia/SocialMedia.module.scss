@@ -1,0 +1,17 @@
+@import "../../scss/variables.scss";
+
+.container {
+  text-align: center;
+  color: $shell-mid-brown;
+  max-width: 525px;
+  padding: 5px;
+
+  > {
+    display: block;
+  }
+  .linksContainer {
+    // > {
+    //   color: $shell-mid-brown;
+    // }
+  }
+}

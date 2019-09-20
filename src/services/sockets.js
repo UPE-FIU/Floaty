@@ -3,7 +3,7 @@
  */
 
 const io = require("socket.io-client");
-const socket = io.connect("http://c083ff71.ngrok.io/");
+const socket = io.connect("https://api.shellhacks.net");
 
 /**
  * Triggers when on new annoucements
@@ -19,4 +19,4 @@ const scheduleEvent = socket.on("schedule_updated", () => {
   console.log("refresh page");
 });
 
-export default { announcementEvent, scheduleEvent };
+export default socket;
