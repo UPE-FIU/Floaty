@@ -6,11 +6,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Card.module.scss";
 
-const Card = ({ children, className }) => {
+const Card = ({ children}) => {
   return (
-    <section className={styles.cardContainer}>
+    <div className={styles.container}>
       <div className={styles.children}>{children}</div>
-    </section>
+    </div>
   );
 };
 

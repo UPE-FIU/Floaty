@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AnimatedWaves from "../components/AnimatedWaves";
 import Notification from "react-notifications-component";
-import { CurrentTime, CountdownTimer } from "../components/Timer";
 import data from "./dummy";
 import data2 from "./dummy2";
 import List from "../components/List";
@@ -10,6 +9,7 @@ import MLHBadge from "../components/MLHBadge";
 import Organizers from "../components/Organizers";
 import Demo from "../components/Demo";
 import Music from "../components/Music";
+import Timer from "../components/Timer";
 import SocialMedia from "../components/SocialMedia";
 import styles from "./Page.module.scss";
 
@@ -33,10 +33,7 @@ const Live = () => {
           </div>
           <div className={styles.rightContainer}>
             <div className={styles.timerContainer}>
-              <CountdownTimer />
-              <div>
-                <CurrentTime />
-              </div>
+              <Timer />
             </div>
             <div className={styles.scheduleAndAnnouncements}>
               <List>

@@ -1,12 +1,12 @@
 @import "../../scss//variables.scss";
 
-.cardContainer {
-  padding: 5%;
+.container {
+  margin: 25px;
+  padding: 25px 50px;
   background-color: rgba(206, 188, 143, 0.4);
   border-radius: 25px;
-  margin: 10% 5%;
   color: white;
-  border: solid lightgray;
+  border: solid 1px $shell-sand;
 
   .children {
     display: flex;

@@ -32,7 +32,6 @@ $container-padding: 50px;
     }
   }
   .rightContainer {
-    width: 70%;
     max-height: $max-conatiner-height;
     padding: $container-padding;
     height: 100%;
@@ -50,8 +49,6 @@ $container-padding: 50px;
     }
     .scheduleAndAnnouncements {
       display: flex;
-      flex-direction: row;
-      justify-content: space-around;
       height: 100%;
     }
   }
