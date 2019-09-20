@@ -62,7 +62,7 @@ class Live extends Component {
               </div>
               <div className={styles.musicPlayerSection}>
                 {/* <iframe src="https://open.spotify.com/embed/playlist/2R0OPkOjSI3AzpnC0VCbs5" width="400" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> */}
-                <iframe width="560" height="315" 
+                <iframe width="100%" height="100%" 
                 src="https://www.youtube.com/embed/hHW1oY26kxQ" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
