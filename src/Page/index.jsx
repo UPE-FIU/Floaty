@@ -59,9 +59,6 @@ const Live = () => {
               </List>
             </div>
           </div>
-          <div className={styles.sponsors}>
-            <h1>sponsors</h1>
-          </div>
         </div>
       </AnimatedWaves>
     </div>

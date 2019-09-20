@@ -10,7 +10,6 @@ $container-padding: 50px;
   height: 100vh;
   width: 100vw;
   display: flex;
-  flex-wrap: wrap;
   overflow: hidden;
 
   .leftContainer {
@@ -33,7 +32,7 @@ $container-padding: 50px;
   }
   .rightContainer {
     max-height: $max-conatiner-height;
-    padding: $container-padding;
+    padding: 50px 100px 50px 50px;
     height: 100%;
 
     .timerContainer {
