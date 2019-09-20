@@ -97,26 +97,6 @@ class Live extends Component {
                 ))}
               </List>
               </div>
-                {/*
-                <div className="anouncements-container">
-                  <h2>Announcements</h2>
-                  <div className="announcement-list">
-                    <AnnouncementList data={[{title: "Snacks Update!",
-                                    body: "Snacks will be coming around in the next 10 minutes",
-                                    author: "ShellHacks Team"}]}/>
-                  </div>
-                </div>
-                <div className="schedule-container">
-                  <h2>Schedule</h2>
-                  <div className="live-schedule">
-                  <ScheduleList data={[{title: "HMTL Workshop", 
-                                    startTime: "Friday 1:00PM", 
-                                    location: "PG6", 
-                                    organizer: "UPE", 
-                                    description: "Learn HTML from Jehf Doe"}]}/>
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
         </AnimatedWaves>
