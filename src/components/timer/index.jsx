@@ -12,7 +12,6 @@ const CountdownTimer = () => {
         let endTime = moment("2019-09-22T09:30:00");
 
         let currentTime = moment();
-        console.log(currentTime)
         let totalTime = moment.duration(endTime.diff(currentTime)).format("hh:mm:ss")
 
         setUpdateTime(totalTime)
