@@ -64,7 +64,8 @@ class Live extends Component {
                 src="https://www.youtube.com/embed/hHW1oY26kxQ" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
+                allowfullscreen
+                title = "music livestream">
                 </iframe>
               </div>
             </div>
