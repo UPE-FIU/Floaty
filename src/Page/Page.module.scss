@@ -16,8 +16,10 @@ $container-padding: 50px;
   display: flex;
   overflow: hidden;
   justify-content: center;
-li{margin:8px;
-font-weight: bold;}
+  li {
+    margin:8px;
+    font-weight: bold;
+  }
  
   .leftContainer {
     width: 30%;
@@ -77,19 +79,6 @@ font-weight: bold;}
   }
 }
 @media only screen and (max-width: 780px) {
-  // .pageContainer {
-  //   display: none;
-  // }
-  // .message {
-  //   z-index: 1000;
-  //   display: flex;
-  //   font-size: 2em;
-  //   justify-content: center;
-  //   align-items: center;
-  //   text-align: center;
-  //   height: 100vh;
-  //   color: $shell-mid-brown;
-  // }
   .pageContainer {
     flex-direction: column;
     align-items: center;
@@ -100,6 +89,10 @@ font-weight: bold;}
     }
     .rightContainer {
       width: 100%;
+      padding: 0px 40px 0px 40px;
+      .scheduleAndAnnouncements {
+        flex-direction: column;
+      }
       .timerContainer {
         width: 100%;
         padding: 15px 5px;

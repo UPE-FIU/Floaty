@@ -106,6 +106,7 @@ const Live = () => {
                 {announcements.map((card, i) => (
                   <Card key={i}>
                     <h2>{card.title}</h2>
+                    <br/>
                     <h3>{card.body}</h3>
                     <h3>{card.category}</h3>
                     <h3>{card.sendTime}</h3>
