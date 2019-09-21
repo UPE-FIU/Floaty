@@ -12,6 +12,7 @@ import Timer from "../components/Timer";
 import SocialMedia from "../components/SocialMedia";
 import Notify from "../components/Notification";
 import styles from "./Page.module.scss";
+import Link from "../components/Link"
 
 import sockets from "../services/sockets";
 import services from "../services/api";
@@ -20,53 +21,15 @@ import moment from "moment";
 const Live = () => {
   const [events, setEvents] = useState([]);
   const [announcements, setAnnouncements] = useState([]);
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
 
   const getEvs = async () => {
     const data = await services.getEvents();
     setEvents(data);
-
-    // setSuccess("New Event!");
-    // store.addNotification({
-    //   title: "New Event",
-    //   message: "A new event have been added",
-    //   type: "success",
-    //   insert: "bottom",
-    //   container: "bottom-center",
-    //   animationIn: ["animated", "fadeIn"],
-    //   animationOut: ["animated", "fadeOut"],
-    //   dismiss: {
-    //     duration: 5000,
-    //     onScreen: true
   };
 
   const getAnns = async () => {
     const data = await services.getAnnoucements();
     setAnnouncements(data);
-    // .then(resp => {
-    //   console.log("sfhksvk797hsv");
-
-    //   setAnnouncements(resp);
-    //   setSuccess("New Notification!");
-
-    //   store.addNotification({
-    //     title: "New Notification",
-    //     message: "check the annoucements list",
-    //     type: "success",
-    //     insert: "bottom",
-    //     container: "bottom-center",
-    //     animationIn: ["animated", "fadeIn"],
-    //     animationOut: ["animated", "fadeOut"],
-    //     dismiss: {
-    //       duration: 5000,
-    //       onScreen: true
-    //     }
-    //   });
-    // })
-    // .catch(err => {
-    //   setError(err.data);
-    // });
   };
 
   useEffect(() => {
@@ -74,38 +37,61 @@ const Live = () => {
     getEvs();
   }, []);
 
-  /**
-   * Triggers when on new annoucements
-   */
   sockets.on("announcement", data => {
     console.log(data);
     getAnns();
+    store.addNotification({
+      title: "New Announcement!",
+      message: "Check the annoucements list...",
+      type: "success",
+      insert: "bottom",
+      container: "bottom-center",
+      animationIn: ["animated", "fadeIn"],
+      animationOut: ["animated", "fadeOut"],
+      dismiss: {
+        duration: 5000,
+        onScreen: true
+      }
+    });
   });
 
-  /**
-   * Triggers when on new events
-   */
   sockets.on("schedule_updated", () => {
     console.log("refresh page");
     getEvs();
+    store.addNotification({
+      title: "New Event Added!",
+      message: "check the events list...",
+      type: "success",
+      insert: "bottom",
+      container: "bottom-center",
+      animationIn: ["animated", "fadeIn"],
+      animationOut: ["animated", "fadeOut"],
+      dismiss: {
+        duration: 5000,
+        onScreen: true
+      }
+    });
   });
-
+  console.log(announcements)
   return (
     <div>
       <MLHBadge />
       <AnimatedWaves>
-      <div className={styles.message}>
-            <h1>Sorry buddy, We don't do mobile...</h1>
-          </div>
+        <div className={styles.message}>
+          <h1>Sorry buddy, We don't do mobile...</h1>
+        </div>
         <div className={styles.pageContainer}>
-        
-          {error && <Notify />}
-          {success && <Notify />}
-
+          <Notify />
           <div className={styles.leftContainer}>
             <Organizers />
             <Demo />
             <SocialMedia />
+            <div style={{display:"block",width:"100%",textAlign:"center"}}>
+              <div className={styles.floorPlans}>
+              <Link to="https://drive.google.com/file/d/1wT0cib7JF-HwSbBZj9XIt6f6u0WAziz8/view?usp=sharing"><h3>Floor Plan: First Floor</h3></Link>
+              <Link to="https://drive.google.com/file/d/1au-NUFuqrd3FnhSfnp-8kDOcqwyygvM8/view?usp=sharing"><h3>Floor Plan: Second Floor</h3></Link>
+              </div>
+            </div>
             {/* <Music /> */}
           </div>
           <div className={styles.rightContainer}>
@@ -128,10 +114,10 @@ const Live = () => {
                 {events.map((card, i) => (
                   <Card key={i}><ul>
                     <h2>{card.title}</h2>
-                    <br/>
+                    <br />
                     <li>⏱️ Start: {moment(card.startTime).format("LLLL")}</li>
                     <li>⏱️ End: {moment(card.endTime).format("LLLL")}</li>
-                    </ul>
+                  </ul>
                   </Card>
                 ))}
               </List>
