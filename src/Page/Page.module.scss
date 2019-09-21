@@ -16,7 +16,8 @@ $container-padding: 50px;
   display: flex;
   overflow: hidden;
   justify-content: center;
-
+li{margin:8px;
+font-weight: bold;}
  
   .leftContainer {
     width: 30%;
@@ -56,6 +57,9 @@ $container-padding: 50px;
     .scheduleAndAnnouncements {
       display: flex;
       height: 100%;
+      .announcements {
+        width: 50%
+      }
     }
   }
   .sponsors {

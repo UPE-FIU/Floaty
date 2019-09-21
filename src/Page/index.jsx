@@ -126,12 +126,12 @@ const Live = () => {
               </List>
               <List>
                 {events.map((card, i) => (
-                  <Card key={i}>
+                  <Card key={i}><ul>
                     <h2>{card.title}</h2>
-                    <h3>Start time: {moment(card.startTime).format("LLLL")}</h3>
-                    <h3>End time: {moment(card.endTime).format("LLLL")}</h3>
-                    <h3>{card.presenters}</h3>
-                    <p>{card.description}</p>
+                    <br/>
+                    <li>⏱️ Start: {moment(card.startTime).format("LLLL")}</li>
+                    <li>⏱️ End: {moment(card.endTime).format("LLLL")}</li>
+                    </ul>
                   </Card>
                 ))}
               </List>

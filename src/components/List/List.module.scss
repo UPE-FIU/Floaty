@@ -1,4 +1,8 @@
-.listContainer{
-    height: 100%;
-    overflow-y: auto;
+.scrollarea {
+    widows: 50%;
+
+    .listContainer{
+        height: 100%;
+        overflow-y: auto;
+    }
 }
