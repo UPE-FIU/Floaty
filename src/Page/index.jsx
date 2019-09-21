@@ -98,7 +98,7 @@ const Live = () => {
             <h1>Sorry buddy, We don't do mobile...</h1>
           </div>
         <div className={styles.pageContainer}>
-          
+        
           {error && <Notify />}
           {success && <Notify />}
 
