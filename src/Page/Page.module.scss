@@ -11,6 +11,10 @@ $container-padding: 50px;
   width: 100vw;
   display: flex;
   overflow: hidden;
+  justify-content: center;
+  .message {
+    display: none;
+  }
 
   .leftContainer {
     width: 30%;
@@ -34,6 +38,7 @@ $container-padding: 50px;
     max-height: $max-conatiner-height;
     padding: 50px 100px 50px 50px;
     height: 100%;
+    width: 66vw;
 
     .timerContainer {
       display: flex;
@@ -58,5 +63,20 @@ $container-padding: 50px;
     padding: 25px;
     display: flex;
     overflow-x: auto;
+  }
+}
+@media only screen and (max-height: 1075px) {
+  .pageContainer {
+    display: none;
+  }
+  .message {
+    z-index: 1000;
+    display: flex;
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    color: $shell-mid-brown;
   }
 }
