@@ -1,0 +1,28 @@
+@import "../../scss/variables.scss";
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .organizer {
+    width: 100%;
+    > img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .cohost {
+    display: inline-flex;
+    h3 {
+      align-items: center;
+      display: flex;
+      color: $shell-mid-brown;
+      font-size: unset;
+    }
+    > img {
+      width: 70%;
+      height: auto;
+    }
+  }
+}

@@ -1,50 +1,41 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react";
 import moment from "moment";
-import "moment-duration-format"
-import styles from "./Timer.module.scss"
-const CountdownTimer = () => {
-    const [
-        updateTime, setUpdateTime
-    ] = useState('')
-    const getCountdown = () => {
+import "moment-duration-format";
+import styles from "./Timer.module.scss";
 
-        let startTime = moment("2019-09-20T22:30:00");
-        let endTime = moment("2019-09-22T09:30:00");
+const Timer = () => {
+  const [updateTime, setUpdateTime] = useState("");
+  const [currentTime, setCurrentTime] = useState("");
 
-        let currentTime = moment();
-        console.log(currentTime)
-        let totalTime = moment.duration(endTime.diff(currentTime)).format("DD:hh:mm:ss")
+  const getCountdown = () => {
+    let startTime = moment("2019-09-20T22:30:00");
+    let endTime = moment("2019-09-22T09:30:00");
 
-        setUpdateTime(totalTime)
-    }
+    let currentTime = moment();
+    let totalTime = moment
+      .duration(endTime.diff(currentTime))
+      .format("DD:hh:mm:ss");
 
-    setInterval(() => {
-        getCountdown()
-    }, 1000);
+    setUpdateTime(totalTime);
+  };
 
-    return (
-            <div>
-                <h1>Countdown: {updateTime}</h1>
-            </div>
-    )
-}
+  setInterval(() => {
+    let currentTime = moment().format("lll");
+    setCurrentTime(currentTime);
+    getCountdown();
+  }, 1000);
 
-const CurrentTime = () => {
+  return (
+    <div className={styles.container}>
+      <div>
+        <h4>Countdown</h4>
+        <h1>{updateTime}</h1>
+      </div>
+      <div>
+        <h2>{currentTime}</h2>
+      </div>
+    </div>
+  );
+};
 
-    const [
-       currentTime, setCurrentTime
-    ] = useState('')
-
-    setInterval(() => {
-        let currentTime = moment().format('lll')
-        setCurrentTime(currentTime)
-    }, 1000);
-
-    return (
-        <div>
-            <h2>{currentTime}</h2>
-        </div>
-    )
-}
-
-export {CountdownTimer, CurrentTime};
+export default Timer;

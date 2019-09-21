@@ -1,0 +1,82 @@
+@import "../scss/variables.scss";
+
+$max-conatiner-height: 75vh;
+$min-conatiner-height: 25vh;
+$container-padding: 50px;
+
+.pageContainer {
+  position: absolute;
+  overflow: auto;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  .message {
+    display: none;
+  }
+
+  .leftContainer {
+    width: 30%;
+    max-height: $max-conatiner-height;
+    height: 100%;
+    padding: $container-padding;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .socialMediaContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .musicPlayerSection {
+      z-index: 5;
+    }
+  }
+  .rightContainer {
+    max-height: $max-conatiner-height;
+    padding: 50px 100px 50px 50px;
+    height: 100%;
+    width: 66vw;
+
+    .timerContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $shell-mid-brown;
+      h1 {
+        font-weight: 900;
+        font-size: 4em;
+      }
+    }
+    .scheduleAndAnnouncements {
+      display: flex;
+      height: 100%;
+    }
+  }
+  .sponsors {
+    width: 100%;
+    height: 100%;
+    max-height: $min-conatiner-height;
+    padding: 25px;
+    display: flex;
+    overflow-x: auto;
+  }
+}
+@media only screen and (max-height: 1075px) {
+  .pageContainer {
+    display: none;
+  }
+  .message {
+    z-index: 1000;
+    display: flex;
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    color: $shell-mid-brown;
+  }
+}
