@@ -56,7 +56,12 @@ p {
   background-color: darkblue;
 }
 .scrollarea {
-  
     width: 50%
   
+}
+
+@media only screen and (max-width: 780px) {
+  .scrollarea {
+    width: 100%
+  }
 }

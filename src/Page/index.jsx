@@ -10,7 +10,7 @@ import Demo from "../components/Demo";
 // import Music from "../components/Music";
 import Timer from "../components/Timer";
 import SocialMedia from "../components/SocialMedia";
-import Notify from "../components/Notification";
+//import Notify from "../components/Notification";
 import styles from "./Page.module.scss";
 import Link from "../components/Link"
 
@@ -77,9 +77,9 @@ const Live = () => {
     <div>
       <MLHBadge />
       <AnimatedWaves>
-        <div className={styles.message}>
+        {/* <div className={styles.message}>
           <h1>Sorry buddy, We don't do mobile...</h1>
-        </div>
+        </div> */}
         <div className={styles.pageContainer}>
           <div className={styles.leftContainer}>
             <Organizers />
@@ -106,9 +106,11 @@ const Live = () => {
                 {announcements.map((card, i) => (
                   <Card key={i}>
                     <h2>{card.title}</h2>
+                    <br/>
                     <h3>{card.body}</h3>
                     <h3>{card.category}</h3>
                     <h3>{card.sendTime}</h3>
+                    <br/>
                     <h3>- ShellHacks Team</h3>
                   </Card>
                 ))}
@@ -118,8 +120,10 @@ const Live = () => {
                   <Card key={i}><ul>
                     <h2>{card.title}</h2>
                     <br />
-                    <li>⏱️ Start: {Moment(card.startTime).format("LLLL")}</li>
-                    <li>⏱️ End: {Moment(card.endTime).format("LLLL")}</li>
+                    {/* eslint-disable-next-line */}
+                    <li><span role="img">⏱️</span> Start: {Moment(card.startTime).format("LLLL")}</li>
+                    {/* eslint-disable-next-line */}
+                    <li><span role="img">⏱️</span> End: {Moment(card.endTime).format("LLLL")}</li>
                   </ul>
                   </Card>
                 ))}

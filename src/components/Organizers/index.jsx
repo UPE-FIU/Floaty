@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Organizers.module.scss";
+// eslint-disable-next-line
 const Organizers = ({}) => {
   return (
     <div className={styles.container}>

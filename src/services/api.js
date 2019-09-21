@@ -4,7 +4,7 @@ import axios from "axios";
 //   baseURL: "https://api.shellhacks.net/"
 // });
 
-const URL = 'https://api.shellhacks.net';
+//const URL = 'https://api.shellhacks.net';
 
 /**
  * Get announcements
