@@ -16,7 +16,7 @@ import Link from "../components/Link"
 
 import sockets from "../services/sockets";
 import services from "../services/api";
-import moment from "moment";
+import Moment from "moment";
 
 const Live = () => {
   const [events, setEvents] = useState([]);
@@ -115,8 +115,8 @@ const Live = () => {
                   <Card key={i}><ul>
                     <h2>{card.title}</h2>
                     <br />
-                    <li>⏱️ Start: {moment(card.startTime).format("LLLL")}</li>
-                    <li>⏱️ End: {moment(card.endTime).format("LLLL")}</li>
+                    <li>⏱️ Start: {Moment(card.startTime).format("LLLL")}</li>
+                    <li>⏱️ End: {Moment(card.endTime).format("LLLL")}</li>
                   </ul>
                   </Card>
                 ))}
