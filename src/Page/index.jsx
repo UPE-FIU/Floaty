@@ -113,7 +113,7 @@ const Live = () => {
               <Timer />
             </div>
             <div className={styles.scheduleAndAnnouncements}>
-              <List>
+              <List classname={styles.announcements}>
                 {announcements.map((card, i) => (
                   <Card key={i}>
                     <h2>{card.title}</h2>
