@@ -110,6 +110,7 @@ const Live = () => {
                     <h3>{card.body}</h3>
                     <h3>{card.category}</h3>
                     <h3>{card.sendTime}</h3>
+                    <br/>
                     <h3>- ShellHacks Team</h3>
                   </Card>
                 ))}

@@ -7,9 +7,9 @@
 }
 
 @media only screen and (max-width: 780px) {
-    .scrollarea{
+    .scrollarea {
         .scrollarea-content{
-            touch-action: pan-y
+            touch-action: unset !important
         }
     }
 }

@@ -92,6 +92,9 @@ $container-padding: 50px;
       padding: 0px 40px 0px 40px;
       .scheduleAndAnnouncements {
         flex-direction: column;
+        :nth-child(1) {
+          touch-action: unset !important
+        }
       }
       .timerContainer {
         width: 100%;
