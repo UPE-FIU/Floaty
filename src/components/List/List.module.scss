@@ -2,6 +2,8 @@
     widows: 50%;
     .listContainer{
         height: 100%;
+        display: flex;
+        flex-direction: column-reverse;
         //overflow-y: auto;
     }
 }
@@ -9,7 +11,7 @@
 @media only screen and (max-width: 780px) {
     .scrollarea {
         .scrollarea-content{
-            touch-action: unset !important
+           
         }
     }
 }

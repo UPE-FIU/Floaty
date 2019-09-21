@@ -77,9 +77,6 @@ const Live = () => {
     <div>
       <MLHBadge />
       <AnimatedWaves>
-        {/* <div className={styles.message}>
-          <h1>Sorry buddy, We don't do mobile...</h1>
-        </div> */}
         <div className={styles.pageContainer}>
           <div className={styles.leftContainer}>
             <Organizers />
@@ -124,6 +121,8 @@ const Live = () => {
                     <li><span role="img">⏱️</span> Start: {Moment(card.startTime).format("LLLL")}</li>
                     {/* eslint-disable-next-line */}
                     <li><span role="img">⏱️</span> End: {Moment(card.endTime).format("LLLL")}</li>
+                    {/* eslint-disable-next-line */}
+                    <li><span role="img">🗺️</span>Location: {card.location}</li>
                   </ul>
                   </Card>
                 ))}
