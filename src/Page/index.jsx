@@ -81,7 +81,6 @@ const Live = () => {
           <h1>Sorry buddy, We don't do mobile...</h1>
         </div>
         <div className={styles.pageContainer}>
-          <Notify />
           <div className={styles.leftContainer}>
             <Organizers />
             <Demo />
@@ -90,6 +89,10 @@ const Live = () => {
               <div className={styles.floorPlans}>
               <Link to="https://drive.google.com/file/d/1wT0cib7JF-HwSbBZj9XIt6f6u0WAziz8/view?usp=sharing"><h3>Floor Plan: First Floor</h3></Link>
               <Link to="https://drive.google.com/file/d/1au-NUFuqrd3FnhSfnp-8kDOcqwyygvM8/view?usp=sharing"><h3>Floor Plan: Second Floor</h3></Link>
+              </div>
+              <div className={styles.floorPlans}>
+                <h3>Wifi Name: ShellHacks2019</h3>
+                <h3>Wifi Password: Shell1000</h3>
               </div>
             </div>
             {/* <Music /> */}
