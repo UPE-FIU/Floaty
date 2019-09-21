@@ -1,12 +1,12 @@
 import React from "react";
-import {
-  faFacebookSquare,
-  faInstagram,
-  faLinkedin,
-  faTwitterSquare,
-  faDiscord
-} from "@fortawesome/free-brands-svg-icons"; //need to pre-load in app.js
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//   faFacebookSquare,
+//   faInstagram,
+//   faLinkedin,
+//   faTwitterSquare,
+//   faDiscord
+// } from "@fortawesome/free-brands-svg-icons"; //need to pre-load in app.js
+//   import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "../Link";
 import styles from "./Demo.module.scss";
 const Demo = () => {

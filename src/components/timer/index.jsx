@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import moment from "moment";
 import "moment-duration-format";
 import styles from "./Timer.module.scss";
@@ -8,7 +8,7 @@ const Timer = () => {
   const [currentTime, setCurrentTime] = useState("");
 
   const getCountdown = () => {
-    let startTime = moment("2019-09-20T22:30:00");
+    //let startTime = moment("2019-09-20T22:30:00");
     let endTime = moment("2019-09-22T09:30:00");
 
     let currentTime = moment();
